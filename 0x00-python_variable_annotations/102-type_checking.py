@@ -4,10 +4,10 @@ Module that provides a func to zoom into an array by repeating
 elements a specified number of times.
 """
 
-from typing import List, Tuple, Union
+from typing import List, Tuple
 
 
-def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """
     Returns a list where each element in input tuple is repeated `factor` times
 
