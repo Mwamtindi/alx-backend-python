@@ -10,9 +10,6 @@ from 0-basic_async_syntax import wait_random
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """
-    Spawn wait_random n times with the specified max_delay and
-    return the delays in ascending order.
-
     Args:
         n : Number of times to spawn wait_random.
         max_delay : Maximum delay value to use for each wait_random call.
@@ -25,7 +22,6 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
         delay = await wait_random(max_delay)
         delays.append(delay)
 
-    # Return list of delays, sorting without using sort() due to concurrency
     sorted_delays = []
     while delays:
         min_delay = min(delays)
